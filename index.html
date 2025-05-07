@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For You 🌸</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff0f5;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .section {
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .section img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #ff6f91;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      color: #444;
+    }
+
+    .letter {
+      background: #ffe0e9;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 600px;
+      color: #5c2a3b;
+      font-size: 1.2rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: float 6s infinite ease-in;
+      color: #ff6f91;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating hearts -->
+<span class="heart" style="left: 20%; animation-delay: 0s;">💖</span>
+<span class="heart" style="left: 50%; animation-delay: 2s;">💖</span>
+<span class="heart" style="left: 80%; animation-delay: 4s;">💖</span>
+
+<!-- Music -->
+<audio id="background-music" loop>
+  <source src="Get You (feat. Kali Uchis).mp3" type="audio/mpeg">
+</audio>
+<button onclick="playMusic()">Play 🎵</button>
+
+<!-- Sections -->
+<div class="section">
+  <img src="imgs/roses for him.jpg" alt="Roses for you">
+  <h2>Roses for My Pretty Boy</h2>
+  <p>you’ll always be the only man who’ll ever matter to me 🌸</p>
+</div>
+
+<div class="section">
+  <img src="imgs/interlinked.jpg" alt="Interlinked">
+  <h2>My Intention With You</h2>
+  <p>I may not know everything the future holds, but I do know this—my heart feels safest with you. I’ll always be your calm, your peace, and your person. 
+    Never loved someone as much as I love you and I never will. 🫀
+  </p>
+</div>
+
+<div class="section">
+  <img src="imgs/old.jpg" alt="Grow Old Together">
+  <h2>Grow Old Together</h2>
+  <p>I wouldn't wanna grow old with anyone but you, experience the happy, the sad and the "in-between" moments with you. I'll be with you even when earth turns into dust.. ☄️🌠 </p>
+</div>
+
+<div class="section">
+  <img src="imgs/hold.jpg" alt="Hold On Tight">
+  <h2>Never Let Go</h2>
+  <p>I'll make sure to hold on tight, especially on the days you need me most, I'll always be there to hold your hand.
+    And when you feel exhausted enough to fall apart, I promise to hold you together. ❤️‍🩹
+  </p>
+</div>
+
+<div class="section">
+  <img src="imgs/support.jpg" alt="Love">
+  <h2>I'll be your support</h2>
+  <p>I'll always support and believe in you. Even when you feel doubtful yourself, 
+    I'll be there to try my best to be to you like how Khadija was
+     to the Prophet PBUH. I'll believe in you even if no one would. 🪢 
+    Why you ask? Because i want to see you win, i want to see you smash every single dream you have, i want to see you overcome all the barriers you face, i want to see you succeed. 
+    I'm your buggest fan, your top supporter and i'll always be with you in every step of the way. </p>
+</div>
+
+<div class="section">
+  <img src="imgs/Insha Allah.jpg" alt="inshaAllah">
+  <h2>InshaAllah</h2>
+  <p>رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعْيُنٍۢ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا ٧٤ 🌙 <br>
+    “Our Lord! Bless us with ˹pious˺ spouses and offspring who will be the joy of our hearts, and make us models for the righteous.”
+  </p>
+</div>
+
+<div class="section">
+  <div class="letter">
+    <h2 style="margin-bottom: 20px;">A Letter For You 💌</h2>
+    <p>Dear Saadoune, <br><br>
+    I thank Allah every day for writing you into my story. You are my calm after storms, my light in the dark. 
+    With you, everything feels softer, better, more beautiful. <br><br>
+    My soul will always search for yours, even when skies start to fall apart, my love for you will keep growing for eternity... <br><br>
+    I'm excited for every tomorrow by your side, in this dunya and the akhirah, inshaAllah. 🤍<br><br>
+    I'll always love you with all my heart. 💞 </p>
+  </div>
+</div>
+
+<script>
+  function playMusic() {
+    document.getElementById("background-music").play();
